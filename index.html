@@ -4,14 +4,106 @@
     <meta charset="UTF-8">
     <title>Hamza Shafiq – IT Auditor</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-        header { background: #1f2937; color: #fff; padding: 30px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 32px; }
-        header p { margin: 5px 0 0; font-size: 18px; }
-        section { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h2 { color: #111827; border-bottom: 2px solid #1f2937; padding-bottom: 5px; }
-        ul { list-style: none; padding: 0; }
-        ul li { background: #fff; margin: 10px 0; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        /* Basic Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #f3f4f6; color: #111827; line-height: 1.6; }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1f2937, #111827);
+            color: #fff;
+        }
+        header h1 { font-size: 36px; margin-bottom: 10px; }
+        header p { font-size: 18px; color: #cbd5e1; }
+
+        section { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+
+        h2 { font-size: 28px; margin-bottom: 30px; text-align: center; color: #1f2937; position: relative; }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #1d4ed8;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Services Grid */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(60deg, #1d4ed8, #3b82f6, #9333ea, #ec4899);
+            background-size: 400% 400%;
+            filter: blur(50px);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+            animation: gradientMove 8s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            color: #111827;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #374151;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #1f2937;
+            color: #fff;
+            margin-top: 50px;
+        }
+
         a { color: #1d4ed8; text-decoration: none; }
         a:hover { text-decoration: underline; }
     </style>
@@ -25,43 +117,33 @@
 
 <section>
     <h2>Services & Skills</h2>
-    <ul>
-        <li>ITGC Testing (Access, Change Management, Logical Security)</li>
-        <li>User Access & Privileged Access Reviews</li>
-        <li>Risk & Control Assessments</li>
-        <li>ISO 27001 Gap Assessment Support</li>
-        <li>Audit Documentation & Evidence Review</li>
-        <li>Cybersecurity Audit & Compliance Readiness</li>
-    </ul>
+    <div class="services">
+        <div class="service-card">
+            <h3>ITGC Testing</h3>
+            <p>Comprehensive testing of IT general controls including access, change management, and logical security.</p>
+        </div>
+        <div class="service-card">
+            <h3>Access Control Review</h3>
+            <p>Detailed review of user and privileged access, segregation of duties, and recommendations for compliance.</p>
+        </div>
+        <div class="service-card">
+            <h3>ISO 27001 Gap Assessment</h3>
+            <p>Identifying gaps in security controls to prepare organizations for ISO 27001 certification readiness.</p>
+        </div>
+        <div class="service-card">
+            <h3>Risk & Control Assessment</h3>
+            <p>Evaluate risks and IT controls to strengthen governance and improve security posture.</p>
+        </div>
+        <div class="service-card">
+            <h3>Cybersecurity Audit</h3>
+            <p>Full evaluation of cybersecurity measures, threat assessment, and actionable audit recommendations.</p>
+        </div>
+    </div>
 </section>
 
-<section>
-    <h2>Portfolio / Work Examples</h2>
-    <ul>
-        <li>
-            <strong>ITGC Access Review</strong><br>
-            Conducted access control review for a medium-size org (names redacted). <a href="#">Screenshot / PDF</a>
-        </li>
-        <li>
-            <strong>ISO 27001 Gap Assessment</strong><br>
-            Performed risk assessment and gap analysis. <a href="#">Screenshot / PDF</a>
-        </li>
-        <li>
-            <strong>Cybersecurity Audit Support</strong><br>
-            Evaluated security controls and provided audit recommendations. <a href="#">Screenshot / PDF</a>
-        </li>
-    </ul>
-</section>
-
-<section>
-    <h2>Contact & Links</h2>
-    <ul>
-        <li>Email: hamzacva52@gmail.com</li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/hamza-shafiq-993519382/">https://www.linkedin.com/in/hamza-shafiq-993519382/</a></li>
-        <li>Fiverr: <a href="https://www.fiverr.com/hamza_auditor">https://www.fiverr.com/hamza_auditor</a></li>
-        <li>GitHub: <a href="https://github.com/hamza-auditor/hamza-auditor">https://github.com/hamza-auditor/hamza-auditor</a></li>
-    </ul>
-</section>
+<footer>
+    &copy; 2026 Hamza Shafiq | <a href="mailto:hamzacva52@gmail.com">Email Me</a> | <a href="https://www.linkedin.com/in/hamza-shafiq-993519382/">LinkedIn</a>
+</footer>
 
 </body>
 </html>
