@@ -1,149 +1,36 @@
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hamza Shafiq – IT Auditor</title>
-    <style>
-        /* Basic Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: #f3f4f6; color: #111827; line-height: 1.6; }
-
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #1f2937, #111827);
-            color: #fff;
-        }
-        header h1 { font-size: 36px; margin-bottom: 10px; }
-        header p { font-size: 18px; color: #cbd5e1; }
-
-        section { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-
-        h2 { font-size: 28px; margin-bottom: 30px; text-align: center; color: #1f2937; position: relative; }
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #1d4ed8;
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Services Grid */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(60deg, #1d4ed8, #3b82f6, #9333ea, #ec4899);
-            background-size: 400% 400%;
-            filter: blur(50px);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 0;
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-            animation: gradientMove 8s ease infinite;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .service-card h3 {
-            font-size: 22px;
-            color: #111827;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-card p {
-            font-size: 16px;
-            color: #374151;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            background: #1f2937;
-            color: #fff;
-            margin-top: 50px;
-        }
-
-        a { color: #1d4ed8; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+<meta charset="UTF-8">
+<title>Hamza Shafiq – IT Auditor</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
 <header>
-    <h1>Hamza Shafiq – IT Auditor</h1>
-    <p>2+ years experience in ITGC & Cybersecurity Controls | ISO 27001 Compliance | Risk Assessment</p>
+<h1>Hamza Shafiq – IT Auditor</h1>
+<p>2+ years experience in ITGC & Cybersecurity Controls | ISO 27001 Compliance | Risk Assessment</p>
 </header>
 
 <section>
-    <h2>Services & Skills</h2>
-    <div class="services">
-        <div class="service-card">
-            <h3>ITGC Testing</h3>
-            <p>Comprehensive testing of IT general controls including access, change management, and logical security.</p>
-        </div>
-        <div class="service-card">
-            <h3>Access Control Review</h3>
-            <p>Detailed review of user and privileged access, segregation of duties, and recommendations for compliance.</p>
-        </div>
-        <div class="service-card">
-            <h3>ISO 27001 Gap Assessment</h3>
-            <p>Identifying gaps in security controls to prepare organizations for ISO 27001 certification readiness.</p>
-        </div>
-        <div class="service-card">
-            <h3>Risk & Control Assessment</h3>
-            <p>Evaluate risks and IT controls to strengthen governance and improve security posture.</p>
-        </div>
-        <div class="service-card">
-            <h3>Cybersecurity Audit</h3>
-            <p>Full evaluation of cybersecurity measures, threat assessment, and actionable audit recommendations.</p>
-        </div>
-    </div>
+<h2>Welcome</h2>
+<p>This portfolio showcases my IT audit services, access reviews, cybersecurity projects, and compliance work.</p>
 </section>
-
-<footer>
-    &copy; 2026 Hamza Shafiq | <a href="mailto:hamzacva52@gmail.com">Email Me</a> | <a href="https://www.linkedin.com/in/hamza-shafiq-993519382/">LinkedIn</a>
-</footer>
-
 </body>
 </html>
