@@ -22,3 +22,18 @@ const observer = new IntersectionObserver(entries => {
 
 cards.forEach(card => observer.observe(card));
 
+// Smooth scroll for nav links
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', e=>{
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    const target = document.querySelector(href);
+    if(target){
+        target.scrollIntoView({behavior:'smooth'});
+    } else {
+        window.location.href = href; // for multi-page navigation
+    }
+  });
+});
+
+
